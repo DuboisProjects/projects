@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aaron Dubois</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      header {
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+      }
+
+      nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      section {
+        margin-top: 0px;
+        padding: 14px;
+      }
+
+      h2 {
+        color: #333;
+        padding: 0;
+      }
+
+      small {
+        padding: 0;
+        font-size: 12px;
+      }
+
+      .expandable-content {
+        display: none;
+      }
+
+      img {
+        padding: 10px;
+        max-width: 20%;
+        height: auto;
+      }
+
+      img.centered {
+        display: block;
+        margin: auto;
+        margin-top: 70px;
+        max-width: 150px;
+        height: auto;
+      }
+
+      ul {
+        list-style-type: disc; /* Set the type of bullet (e.g., disc, circle, square) */
+        padding: 0;
+        padding-left: 20px; /* Add left padding for indentation */
+      }
+
+      li {
+        padding-bottom: 5px;
+      }
+    </style>
+    <script>
+      function toggleContent(elementId) {
+        var content = document.getElementById(elementId);
+        content.style.display =
+          content.style.display === "none" || content.style.display === ""
+            ? "block"
+            : "none";
+
+        // Prevent the default behavior of the anchor tag
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      src="./images/aaronphoto.jpg"
+      alt="Aaron Dubois Professional Photo"
+      class="centered"
+    />
+    <header>
+      <h1>Aaron Dubois</h1>
+    </header>
+    <nav>
+      <a href="index.html">Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+    <section>
+      <h2>Projects</h2>
+      <small><i>Date of completion is given. </i></small>
+      <ul>
+        <!-- Add most recent projects at the top-->
+        <!-- Code to copy
+            <li><a href="#" onclick="toggleContent('contentX', event)">Name of Project</a></li>
+            <div class="expandable-content" id="contentX">
+                <img src="./images/TrashCan.jpg" alt="TrashCan 1" />
+                <img src="./images/TrashCan2.jpg" alt="TrashCan 2" />
+                <p>Description of project.</p>
+                <p><b>Tools & Machines Used</b></p>
+                <ul>
+                    <li>MIG Welder</li>
+                    <li>Band Saw</li>
+                    <li>Sheet Metal Brake</li>
+                    <li>Belt Sander</li>
+                    <li>Angle Grinder</li>
+                </ul>
+                <p><b>Materials Used </b></p>
+                <ul>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </div>
+            
+        -->
+
+        <li>
+          <a href="#" onclick="toggleContent('content3', event)"
+            >Welded Trash Can - 12/13/2023</a
+          >
+        </li>
+        <div class="expandable-content" id="content3">
+          <img src="./images/TrashCan.jpg" alt="TrashCan 1" />
+          <img src="./images/TrashCan2.jpg" alt="TrashCan 2" />
+          <p>
+            Needed a new trash can for my apartment. This was obviously the
+            easiest way to obtain one.
+          </p>
+          <p><b>Tools & Machines Used</b></p>
+          <ul>
+            <li>MIG Welder</li>
+            <li>Band Saw</li>
+            <li>Sheet Metal Brake</li>
+            <li>Belt Sander</li>
+            <li>Angle Grinder</li>
+          </ul>
+          <p><b>Materials Used </b></p>
+          <ul>
+            <li>
+              Metal from a scrapped Swarthmore Engineering department cart.
+            </li>
+          </ul>
+        </div>
+
+        <li>
+          <a href="#" onclick="toggleContent('content2', event)"
+            >Machined Solar Panel to USB - 12/04/2023</a
+          >
+        </li>
+        <div class="expandable-content" id="content2">
+          <img src="./images/SolarCharger.jpg" alt="SolarCharger 1" />
+          <img src="./images/SolarCharger2.jpg" alt="SolarCharger 2" />
+          <p>
+            Solar panel stores energy in a rechargeable battery which can then
+            output the energy through a USB cable of choice when desired. Main
+            project for Physics 63, a shop class.
+          </p>
+          <p><b>Tools & Machines Used</b></p>
+          <ul>
+            <li>CNC Mill & CAD/CAM</li>
+            <li>Lathe</li>
+            <li>Manual Mill</li>
+            <li>Soldering Iron</li>
+            <li>Circuit Design & PCB Mini Mill</li>
+          </ul>
+          <p><b>Materials Used </b></p>
+          <ul>
+            <li>Various Stock</li>
+            <li>Various Electronic Parts</li>
+          </ul>
+        </div>
+
+        <li>
+          <a href="#" onclick="toggleContent('content1', event)"
+            >Soldered Noise Maker - 12/04/2023</a
+          >
+        </li>
+        <div class="expandable-content" id="content1">
+          <img src="./images/NoiseMaker.jpg" alt="Noise Maker 1" />
+          <img src="./images/NoiseMaker2.jpg" alt="Noise Maker 2" />
+          <p>Soldering practice project for Physics 63, a shop class.</p>
+          <p><b>Tools & Machines Used</b></p>
+          <ul>
+            <li>Soldering Iron</li>
+            <li>Wire Related Tools</li>
+          </ul>
+          <p><b>Materials Used </b></p>
+          <ul>
+            <li>Various Electronic Parts</li>
+            <li>Resin 3D Printer & CAD</li>
+          </ul>
+        </div>
+
+        <!---->
+      </ul>
+    </section>
+  </body>
+</html>
