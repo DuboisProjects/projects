@@ -90,6 +90,24 @@
         // Prevent the default behavior of the anchor tag
         event.preventDefault();
       }
+
+      function searchCompletedProjects() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("completedProjects");
+        li = ul.getElementsByTagName("li");
+
+        // Loop through completed project list, hide those that don't match the search query
+        for (i = 0; i < li.length; i++) {
+          txtValue = li[i].textContent || li[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
     </script>
   </head>
   <body>
@@ -107,7 +125,7 @@
     </nav>
     <section>
       <h2>Ongoing Projects</h2>
-      <ul>
+      <ul id="ongoingProjects">
         <li>Wind Resonator for Professor Research</li>
         <li>Hybrid Drone</li>
         <li>Portable Ergonomic Mirror with Professor</li>
@@ -115,7 +133,14 @@
       </ul>
       <h2>Completed Disclosable Projects</h2>
       <small><i>Date of completion is given. </i></small>
-      <ul>
+      <input
+        type="text"
+        id="searchInput"
+        onkeyup="searchCompletedProjects()"
+        placeholder="Search project titles..."
+      />
+
+      <ul id="completedProjects">
         <!-- Add most recent projects at the top-->
         <!-- Code to copy
             <li><a href="#" onclick="toggleContent('contentX', event)">Name of Project</a></li>
@@ -170,7 +195,7 @@
 
         <li>
           <a href="#" onclick="toggleContent('content2', event)"
-            >Machined Solar Panel to USB - 12/04/2023</a
+            >Solar-Powered USB Charger- 12/04/2023</a
           >
         </li>
         <div class="expandable-content" id="content2">
@@ -198,7 +223,7 @@
 
         <li>
           <a href="#" onclick="toggleContent('content1', event)"
-            >Soldered Noise Maker - 12/04/2023</a
+            >Noise Maker - 12/04/2023</a
           >
         </li>
         <div class="expandable-content" id="content1">
