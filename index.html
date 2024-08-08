@@ -9,13 +9,14 @@
       body {
         margin: 0;
         padding: 0;
-        font-family: "Arial", sans-serif;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: rgb(217, 217, 217);
       }
 
       header {
-        background-color: white;
         padding: 10px;
         text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
       }
 
       nav {
@@ -57,9 +58,9 @@
       }
 
       img {
-        padding: 10px;
         max-width: 20%;
         height: auto;
+        border: 2px solid #123c50;
       }
 
       img.centered {
@@ -81,7 +82,7 @@
       }
 
       a.research:link {
-        color: green;
+        color: #123c50;
       }
 
       a.research:hover {
@@ -89,7 +90,7 @@
       }
 
       a.research:active {
-        color: orange;
+        color: rgb(125, 12, 12);
       }
 
       a.intern:link {
@@ -101,7 +102,11 @@
       }
 
       a.intern:active {
-        color: orange;
+        color: rgb(125, 12, 12);
+      }
+
+      a:link {
+        color: rgb(17, 125, 127);
       }
 
       a:hover {
@@ -109,7 +114,19 @@
       }
 
       a:active {
-        color: orange;
+        color: rgb(125, 12, 12);
+      }
+
+      hr {
+        border-top: 10px solid rgb(17, 125, 127);
+      }
+
+      hr.new {
+        border-top: 2px solid rgb(17, 125, 127);
+      }
+
+      input[type="text"] {
+        font-family: Georgia, 'Times New Roman', Times, serif;
       }
     </style>
     <script>
@@ -175,12 +192,15 @@
       <a href="index.html">Projects</a>
       <a href="about.html">About</a>
     </nav>
+    
     <section>
+      <hr>
       <h2>Ongoing Projects</h2>
       <ul id="ongoingProjects">
         <li>Smith Materials Lab R&D</li>
         <li>Various Smaller Projects</li>
       </ul>
+      <hr>
       <h2>Previous Work</h2>
       <input
         type="text"
@@ -192,12 +212,14 @@
       <small
         ><i
           >For non-research/internship projects, the number of asterisks
-          corresponds to the time put into the project (it
+          corresponds to the time put into the project (or more specifically it
           is proportional to 10^(n/2) hours where n is the number of asterisks;
           5 asterisks = 10^(5/2) ~ 300 hours).
         </i></small
       >
       <br />
+
+      
       <ul id="completedProjects">
         <!-- Add most recent projects at the top-->
         <!-- Code to copy
@@ -643,5 +665,6 @@
         <!---->
       </ul>
     </section>
+    <hr>
   </body>
 </html>
