@@ -120,10 +120,27 @@
       hr {
         border-top: 10px solid #002147;
       }
+
+      hr.sec {
+        border-top: 2px solid #002147;
+      }
       
       input[type="text"] {
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
+
+      .expandable-content {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 95%;
+        border: 2px solid #002147;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
     </style>
     <script>
       function toggleContent(elementId) {
@@ -581,6 +598,29 @@
           <ul>
             <li>Paul Jacobs, Swarthmore Physics Electronics & Computers</li>
             <li>Steve Palmer, Swarthmore Physics Machine Shop Supervisor</li>
+          </ul>
+        </div>
+        <li>
+          <a href="#" onclick="toggleContent('content1', event)"
+            >**Noise Maker - Dec 2023, Aug 2024</a
+          >
+        </li>
+        <div class="expandable-content" id="content1">
+          <img src="./images/NoiseMaker.jpg" alt="Noise Maker 1" />
+          <img src="./images/NoiseMaker2.jpg" alt="Noise Maker 2" />
+          <p>
+            Makes annoying noise that is adjustable in volume and pitch. Created a similar circuit using a 555 & an Op-Amp on a breadboard. 
+            Originally soldering practice project for Physics 63, a shop class.
+          </p>
+          <p><b>Tools & Machines Used</b></p>
+          <ul>
+            <li>Soldering Iron</li>
+            <li>Wire Related Tools</li>
+          </ul>
+          <p><b>Materials Used </b></p>
+          <ul>
+            <li>Various Electronic Parts</li>
+            <li>Resin 3D Printer & CAD</li>
           </ul>
         </div>
         <li>
